@@ -10,25 +10,47 @@ de no ser igual se debe informar si “falta…”  para llegar al número secre
 var contadorIntentos;
 var numeroRandom;
 var numeroSecreto;
-numeroRandom=Math.floor((Math.random() *100)+1);
+
 
 function comenzar()
 {
-	
-	console.log(numeroRandom);
+	contadorIntentos=0;
+	numeroSecreto=Math.floor((Math.random() *100)+1);
+	console.log(numeroSecreto);
+	document.getElementById('intentos').value = contadorIntentos;
+
 }
 	
 function verificar()
 {	
-	numeroSecreto=document.getElementById('numero').value;
-
-	switch (numeroSecreto)
+	numeroRandom=document.getElementById('numero').value;
+	numeroRandom= parseInt(numeroRandom);
+	/*if (numeroRandom == numeroSecreto)
 	{
-		case numeroRandom :
+		alert ("ganaste")
+
+	}
+	*/
+
+
+	switch (numeroRandom)
+	{
+		case numeroSecreto :
 			alert("ganaste");
 		break;
+
+		default:
+			contadorIntentos++;
+			document.getElementById('intentos').value = contadorIntentos
+			if(numeroSecreto>numeroSecreto)
+			{
+				alert("el numero es mas grande");
+			}else
+			{
+				alert("el numero es mas chico");
+			}
 	}
 	alert("sale del switch");
-
+	
 
 }
