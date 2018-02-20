@@ -3,7 +3,16 @@ function Mostrar()
 
 	var contador=0;
 	var acumulador=0;
+	var numerosIngresados;
 
+	while (contador!=5)
+	{
+		contador++;
+		numerosIngresados=prompt("ingrese un numero");
+		numerosIngresados=parseInt(numerosIngresados);
+		acumulador=acumulador + numerosIngresados;
+
+	}
 
 
 document.getElementById('suma').value=acumulador;

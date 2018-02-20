@@ -1,6 +1,7 @@
 function Mostrar()
-{
+{	
 
+	var numero=0;
 	var contador=0;
 	// declarar variables
 	
@@ -8,7 +9,24 @@ function Mostrar()
 
 	while(respuesta!='no')
 	{
-		
+		contador++;
+		numero=prompt("");
+
+		if ( contador==1)
+		{
+			maximo=numero;
+			minimo=numero;
+		}else
+		{
+			if (numero>maximo)
+			{
+				maximo=numero;
+			}
+			if (numero<maximo)
+			{
+				minimo=numero;
+			}
+		}
 	
 	}
 
