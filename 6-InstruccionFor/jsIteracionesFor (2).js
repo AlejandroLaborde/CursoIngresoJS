@@ -21,7 +21,7 @@ function Mostrar()
 	var portcen7=0;
 	var portcen8=0;
 	var portcen9=0;
-	var iteraciones=100;
+	var iteraciones=100000	;
 
 
 
@@ -44,6 +44,16 @@ function Mostrar()
 				contador2++;
 			break;
 			case 3:
+			portcen3 = (contador3 / (iteraciones))*100;
+				if(contador%2==0)
+				{
+					contador3++;
+					contador++;
+
+				}else
+				{
+					contador3++;
+				}
 				contador3++;
 			break;
 			case 4:
@@ -53,17 +63,7 @@ function Mostrar()
 				contador5++;
 			break;
 			case 6:
-				portcen6 = (contador6 / (iteraciones))*100;
-				if(portcen6>7)
-				{
-					contador--;
-					continue;
-
-				}else
-				{
-					contador6++;
-				}
-				
+				contador6++;
 			break;
 			case 7:
 				contador7++;
